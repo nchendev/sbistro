@@ -30,12 +30,12 @@ dictionary = {}
 for row in rows:
   # if key already exists, append the item to list
   if row[0] in dictionary:
-    item = {"english":row[1], "chinese": row[2], "spicy": row[3], "price":row[4]}
+    item = {"spicy":row[1], "english": row[2], "chinese": row[3], "price":row[4]}
     dictionary[row[0]].append(item)
   # if key doesnt exist, make a new list and append item to list
   else:
     dictionary[row[0]] = []
-    item = {"english":row[1], "chinese": row[2], "spicy": row[3], "price":row[4]}
+    item = {"spicy":row[1], "english": row[2], "chinese": row[3], "price":row[4]}
     dictionary[row[0]].append(item)
 
 # import json module

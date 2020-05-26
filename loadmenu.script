@@ -7,13 +7,31 @@ $(document).ready(function() {
           content += "<br>"
           $("#menuItems").append(content);
           var table = $('<table>').addClass('table').css("border", "1px solid black");
-          var row = "<tr><td>English Name</td><td>Chinese Name</td><td>Spicy?</td><td>Price</td><td>Order</td></tr>"
+          var row = "<tr><td>Spice Level</td><td>English Name</td><td>Chinese Name</td><td>Price</td><td>Order</td></tr>"
           table.append(row)
           $.each(item, function(index, variable) {
             var row = $('<tr>')
             $.each(variable, function(fieldName, value) {
               console.log(fieldName,value)
-              var column =  $('<td>').text(value)
+              var column =  $('<td>')
+              if (fieldName == "spicy") {
+                if (parseInt(value) > 0) {
+                  console.log("type of value is " + typeof(value))
+                  column.text("heh")
+                  var peppericon = $('<i>').addClass('fas fa-pepper-hot').addClass('icon')
+                  for(let i = 0; i < parseInt(value); i++) {
+                    console.log("looped" + i)
+                    column.append(peppericon)
+                    column.append(peppericon)
+                  }
+                } else {
+                  column.text(" ")
+                }
+              }  else {
+                column.text(value)
+                console.log(value)
+              }
+              
               row.append(column)
             })
             // note index might be index of current category
