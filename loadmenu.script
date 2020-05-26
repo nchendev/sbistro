@@ -1,0 +1,29 @@
+$(document).ready(function() {
+    $.getJSON("menu.json", function(data) {
+        console.log(data);
+        var content = "Category: "
+        $.each(data, function(key, item) {
+          content += key
+          content += "<br>"
+          $("#menuItems").append(content);
+          var table = $('<table>').addClass('table').css("border", "1px solid black");
+          var row = "<tr><td>English Name</td><td>Chinese Name</td><td>Spicy?</td><td>Price</td><td>Order</td></tr>"
+          table.append(row)
+          $.each(item, function(index, variable) {
+            var row = $('<tr>')
+            $.each(variable, function(fieldName, value) {
+              console.log(fieldName,value)
+              var column =  $('<td>').text(value)
+              row.append(column)
+            })
+            // note index might be index of current category
+            var column = $('<td>').append("<input type=\"checkbox\" name=\""+index+"\" />")
+            row.append(column)
+            table.append(row)
+          })
+          $("#menuItems").append(table);
+
+        })
+       
+    });
+});
