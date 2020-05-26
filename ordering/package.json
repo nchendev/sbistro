@@ -36,7 +36,5 @@
   "devDependencies": {
     "gh-pages": "^2.2.0"
   },
-  "properties" : {
-    "homepage" : "https://nchendev.github.io/sbistro/ordering"    
-  }
+  "homepage" : "https://nchendev.github.io/sbistro/ordering"   
 }
