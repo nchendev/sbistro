@@ -1,3 +1,9 @@
 Category,Spicy,English,Chinese,Price
 Appetizer,1,Egg Roll (1),蛋卷 (1),$2.60
-Appetizer,0,Spring Roll (4),春卷 (4),$5.00
+Appetizer,0,Spring Roll (4),春卷 (4),$4.00
+Soup,0,Wonton Soup (Sm),lazy,2.5
+Soup,0,Egg Drop Soup (Sm),lazy,2.5
+Soup,1,Hot & Sour Soup (Sm),lazy,2.95
+Chef's Spicy Noodle Soup (Soft Noodle),1,Chicken Noodle Soup,lazy,10.25
+Fried Rice,1,Vegetable Fried Rice (curry style),lazy,9.75
+Fried Rice,0,Chicken Fried Rice,lazy,9.95
